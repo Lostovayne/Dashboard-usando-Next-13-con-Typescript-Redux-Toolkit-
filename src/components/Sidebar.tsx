@@ -40,10 +40,7 @@ export const Sidebar = () => {
     return (
         <div
             id="menu"
-            style={{
-                width: "400px",
-            }}
-            className="bg-gray-950 min-h-screen z-10 text-slate-300 w-80 left-0  "
+            className="bg-gray-950 hidden transition-all min-h-screen z-10 text-slate-300 w-80 fixed max-w-sm left-0 top-0 md:block "
         >
             <div id="logo" className="my-4 px-6">
                 <h1 className=" flex items-center text-lg md:text-2xl font-bold text-white">
@@ -51,14 +48,10 @@ export const Sidebar = () => {
                     <span>Dev</span>
                     <span className="text-blue-500">th</span>.
                 </h1>
-                <p className="text-slate-500 text-sm mt-2">
-                    Manage your actions and activities
-                </p>
+                <p className="text-slate-500 text-sm mt-2">Manage your actions and activities</p>
             </div>
             <div id="profile" className="px-6 py-10">
-                <p className="text-slate-500 text-base text-left mb-4">
-                    Pokemon Store
-                </p>
+                <p className="text-slate-500 text-base text-left mb-4">Pokemon Store</p>
                 <a href="#" className="inline-flex space-x-2 items-center">
                     <span>
                         <Image
@@ -70,9 +63,7 @@ export const Sidebar = () => {
                             priority
                         />
                     </span>
-                    <span className="text-sm md:text-base font-bold">
-                        Epsaind dev
-                    </span>
+                    <span className="text-sm md:text-base font-bold">Epsaind dev</span>
                 </a>
             </div>
 
