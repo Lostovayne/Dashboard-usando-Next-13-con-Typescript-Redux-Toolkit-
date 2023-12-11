@@ -19,7 +19,6 @@ export const PokemonCard = ({ pokemon }: Props) => {
         dispatch(toggleFavorite(pokemon));
     };
 
-
     return (
         <div className="mx-auto right-0 mt-2 w-60">
             <div className=" flex flex-col  bg-portage-900  rounded-xl  overflow-hidden shadow-lg">
