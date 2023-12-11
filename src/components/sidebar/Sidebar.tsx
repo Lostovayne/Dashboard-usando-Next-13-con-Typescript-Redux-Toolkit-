@@ -1,12 +1,6 @@
 import Image from "next/image";
 
-import {
-    IoBrowsersOutline,
-    IoCalculator,
-    IoFootball,
-    IoHeartOutline,
-    IoLogoReact,
-} from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoHeartOutline, IoLogoReact } from "react-icons/io5";
 import { SidebarMenuItem } from "./SidebarMenuItem";
 
 const menuItem = [
@@ -40,7 +34,7 @@ export const Sidebar = () => {
     return (
         <div
             id="menu"
-            className="bg-gray-950 hidden transition-all min-h-screen z-10 text-slate-300 w-80 fixed max-w-sm left-0 top-0 md:block "
+            className="bg-portage-950 hidden transition-all min-h-screen z-10 text-slate-300 w-80 fixed max-w-sm left-0 top-0 md:block "
         >
             <div id="logo" className="my-4 px-6">
                 <h1 className=" flex items-center text-lg md:text-2xl font-bold text-white">

@@ -1,6 +1,7 @@
-import { type } from 'os';
-
-export type {PokemonsResponse} from './interfaces/pokemons-response';
-export type  {SimplePokemon} from './interfaces/simple-pokemon';
-export { PokemonGrid } from "./components/PokemonGrid";
-export type { Pokemon} from './interfaces/pokemon';
+export * from './components/FavoritePokemons';
+export * from './components/PokemonCard';
+export * from './components/PokemonGrid';
+export * from './index';
+export * from './interfaces/pokemon';
+export * from './interfaces/pokemons-response';
+export * from './interfaces/simple-pokemon';
