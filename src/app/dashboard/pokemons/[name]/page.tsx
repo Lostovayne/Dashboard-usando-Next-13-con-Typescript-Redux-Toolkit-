@@ -8,9 +8,9 @@ interface Props {
 
 // Generar las paginas de los pokemons
 export async function generateStaticParams() {
-    const data: PokemonsResponse = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/?limit=151`
-    ).then((response) => response.json());
+    const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=151`).then(
+        (response) => response.json()
+    );
 
     const static151Pokemons = data.results.map((pokemon) => ({
         // id: pokemon.url.split("/").at(-2)!,
@@ -40,7 +40,6 @@ const getPokemon = async (name: string): Promise<Pokemon> => {
             revalidate: 60000,
         },
     }).then((response) => response.json());
-    console.log("Se cargó", pokemon.name);
     return pokemon;
 };
 
@@ -56,10 +55,7 @@ export default async function PokemonPage({ params }: Props) {
                     </h1>
                     <div className="flex flex-col justify-center items-center">
                         <Image
-                            src={
-                                pokemon.sprites.other?.dream_world
-                                    .front_default ?? ""
-                            }
+                            src={pokemon.sprites.other?.dream_world.front_default ?? ""}
                             width={150}
                             height={150}
                             alt={`Imagen del pokemon ${pokemon.name}`}
@@ -68,10 +64,7 @@ export default async function PokemonPage({ params }: Props) {
 
                         <div className="flex flex-wrap">
                             {pokemon.moves.map((move) => (
-                                <p
-                                    key={move.move.name}
-                                    className="mr-2 capitalize"
-                                >
+                                <p key={move.move.name} className="mr-2 capitalize">
                                     {move.move.name}
                                 </p>
                             ))}

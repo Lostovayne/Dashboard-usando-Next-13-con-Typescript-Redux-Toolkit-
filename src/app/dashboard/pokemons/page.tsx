@@ -23,7 +23,7 @@ export default async function PokemonsPage() {
 
     return (
         <div className="flex flex-col bg-white">
-            <span className="text-2xl font-medium text-center text-gray-700 mt-4 mb-6">
+            <span className="text-3xl font-bold text-center text-gray-700 mt-4 mb-6">
                 Listado de Pokémons Estáticos
             </span>
             <PokemonGrid pokemons={pokemons} />
